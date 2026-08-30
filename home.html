@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link id="theme" rel="stylesheet" href="../style/dark.css">
+    <script src="../script/food.js"></script>
+    <link rel="icon" type="image/x-icon" href="../images/logo.svg">
+  </head>
+  <body>
+    <div class="content">
+      <div class="container">
+        <div class="left-panel">
+          <h3>Search - <span id="result-count">0</span> result(s)</h3>
+            <input type="text" placeholder="Bread, white - 100g" id="search-bar">
+          <div class="listing" id="listing">
+
+          </div>
+        </div>
+        <div class="right-panel">
+          <div class="top-panel">
+            <h2>Total -  <span id="total">0</span></h2>
+            <div class="bar-track">
+              <div class="bar-fill" id="progress-bar"></div>
+            </div>
+            <div class="cart" id="cart">
+              
+            </div>
+          </div>
+          <div class="bottom-panel">
+            <div class="additionnal-info">
+              <h4>Goal</h4>
+              <input type="number" min="0" value="0" id="goal">
+            </div>
+            <div class="additionnal-info">
+              <h4>Insuline Units (per 10g)</h4>
+              <input type="number" min="0" value="0" id="dosage">
+            </div>
+            <div class="additionnal-info">
+              <h4>Extra Units</h4>
+              <input type="number" min="0" value="0" id="extra">
+            </div>
+            <button id="calculate">Calculate</button>
+          </div>
+          <div class="result-panel">
+            <div class="message">
+              <h4>Need To Recalculate</h4>
+            </div>
+            <div class="overlay">
+              
+            </div>
+            <div class="result"><span id="result">0.0</span><h3> -  Unit(s)</h3></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="alert-module" id="warning">
+      <h2>Warning</h2>
+      <p>This item has already been added to the list.</p>
+    </div>
+    <div class="alert-module" id="error">
+      <h2>Warning</h2>
+      <p>Your insuline dosage must be greater than 0.</p>
+    </div>
+    <button class="theme-button"></button>
+    <script src="../script/main.js"></script>
+  </body>
+</html>
