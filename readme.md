@@ -52,3 +52,7 @@ open index.html
 ## Disclaimer
 
 TeeOne is a personal tracking tool and is **not a substitute for medical advice**. Always consult your healthcare provider or endocrinologist before making decisions about your insulin dosage.
+
+## License
+
+MIT
