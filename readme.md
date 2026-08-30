@@ -1,4 +1,4 @@
-# TeeOne
+# [TeeOne](https://teeone.freedev.app)
 
 TeeOne is a lightweight web app for people with type 1 diabetes to track their carbohydrate intake and calculate insulin dosage in real time.
 
