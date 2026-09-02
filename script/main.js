@@ -32,7 +32,7 @@ function floatting_point_reset(){
   if(Math.abs(total_carbs) < 0.01)
   {
     total_carbs = 0;
-    document.getElementById('total').value = 0;
+    document.getElementById('total').textContent = 0;
   }
 }
 
@@ -55,7 +55,7 @@ function animateNumber(element, start, end, duration, precision) {
 }
 
 // Adds all the elements to the listing
-for (i = 0; i < Object.keys(foods).length; i++) {
+for (let i = 0; i < Object.keys(foods).length; i++) {
   let example = `<div class="element" data-index="${i}"><div class="info"><h4>${foods[i]["name"]}</h4><p>${foods[i]["carbs_per_100g"]}g of carbs - 100g</p></div><div class="button"><button class="add-button" ><svg width="15" height="15" viewBox="0 0 14 14">
     <line x1="7" y1="1" x2="7" y2="13" stroke="white" stroke-width="2"/>
     <line x1="1" y1="7" x2="13" y2="7" stroke="white" stroke-width="2"/>
@@ -73,6 +73,7 @@ document.getElementById("goal").addEventListener("input", () => {
 // Allows add buttons to append elements to the list
 document.querySelectorAll(".element").forEach(btn => {
   btn.addEventListener("click", () => {
+
     let existant = false;
     let index = btn.dataset.index;
 
@@ -113,6 +114,7 @@ document.querySelectorAll(".element").forEach(btn => {
             oldValue = total_carbs;
             total_carbs -= (Number(document.querySelector(`.carbs-input[data-index="${index}"]`).value) / 100) * foods[index]["carbs_per_100g"];
             items.splice(i, 1);
+            len--;
 
             animateNumber(document.getElementById('total'), oldValue, total_carbs, 400, 1);
             document.querySelector(`.item[data-index="${index}"]`).remove();
@@ -147,6 +149,7 @@ document.querySelectorAll(".element").forEach(btn => {
       })
 
       calculate_pourcentage();
+      floatting_point_reset();
     }
     else{
       let specified_item = document.querySelector(`.item[data-index="${index}"]`);
