@@ -87,7 +87,7 @@ document.querySelectorAll(".element").forEach(btn => {
     //  Case where the element isn't in the list yet
     if(!existant)
     {
-      let element = `<div class="item" data-index="${index}"><div class="info" id="info"><h4>${foods[index]['name']}</h4><p>${foods[index]['carbs_per_100g']}g of carbs - 100g</p></div><div class="remove"><input type="number" min="0" data-index="${index}" class="carbs-input" value="100"><button class="remove-button" data-index=${index}><svg width="10" height="10" viewBox="0 0 14 14"><line x1="1" y1="1" x2="13" y2="13" stroke="white" stroke-width="2"/><line x1="13" y1="1" x2="1" y2="13" stroke="white" stroke-width="2"/></svg></button></div></div>`;
+      let element = `<div class="item" data-index="${index}"><div class="info" id="info"><h4>${foods[index]['name']}</h4><p>${foods[index]['carbs_per_100g']}g of carbs - 100g</p></div><div class="remove"><input type="number" min="0" max="30000" data-index="${index}" class="carbs-input" value="100"><button class="remove-button" data-index=${index}><svg width="10" height="10" viewBox="0 0 14 14"><line x1="1" y1="1" x2="13" y2="13" stroke="white" stroke-width="2"/><line x1="13" y1="1" x2="1" y2="13" stroke="white" stroke-width="2"/></svg></button></div></div>`;
       let oldValue = total_carbs;
 
       items.push(foods[index]["name"]);
