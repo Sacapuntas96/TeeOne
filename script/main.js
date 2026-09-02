@@ -129,10 +129,12 @@ document.querySelectorAll(".element").forEach(btn => {
       
       let weight_input = document.querySelector(`.carbs-input[data-index="${index}"]`);
       let current_weight = (Number(weight_input.value) / 100) * foods[index]["carbs_per_100g"];
-      oldValue = total_carbs;
+      
       // Allows to edit the weight of the selected food
       weight_input.addEventListener("input", () => 
       {
+        oldValue = total_carbs;
+        
         document.querySelector('.overlay').style.opacity = 0.8;
         document.querySelector('.message').style.opacity = 1;
         
