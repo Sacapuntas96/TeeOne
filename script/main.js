@@ -32,7 +32,7 @@ function floatting_point_reset(){
   if(Math.abs(total_carbs) < 0.01)
   {
     total_carbs = 0;
-    document.getElementById('total').value = 0;
+    document.getElementById('total').textContent = 0;
   }
 }
 
@@ -55,7 +55,7 @@ function animateNumber(element, start, end, duration, precision) {
 }
 
 // Adds all the elements to the listing
-for (i = 0; i < Object.keys(foods).length; i++) {
+for (let i = 0; i < Object.keys(foods).length; i++) {
   let example = `<div class="element" data-index="${i}"><div class="info"><h4>${foods[i]["name"]}</h4><p>${foods[i]["carbs_per_100g"]}g of carbs - 100g</p></div><div class="button"><button class="add-button" ><svg width="15" height="15" viewBox="0 0 14 14">
     <line x1="7" y1="1" x2="7" y2="13" stroke="white" stroke-width="2"/>
     <line x1="1" y1="7" x2="13" y2="7" stroke="white" stroke-width="2"/>
@@ -73,6 +73,7 @@ document.getElementById("goal").addEventListener("input", () => {
 // Allows add buttons to append elements to the list
 document.querySelectorAll(".element").forEach(btn => {
   btn.addEventListener("click", () => {
+
     let existant = false;
     let index = btn.dataset.index;
 
@@ -87,8 +88,9 @@ document.querySelectorAll(".element").forEach(btn => {
     //  Case where the element isn't in the list yet
     if(!existant)
     {
-      let element = `<div class="item" data-index="${index}"><div class="info" id="info"><h4>${foods[index]['name']}</h4><p>${foods[index]['carbs_per_100g']}g of carbs - 100g</p></div><div class="remove"><input type="number" min="0" data-index="${index}" class="carbs-input" value="100"><button class="remove-button" data-index=${index}><svg width="10" height="10" viewBox="0 0 14 14"><line x1="1" y1="1" x2="13" y2="13" stroke="white" stroke-width="2"/><line x1="13" y1="1" x2="1" y2="13" stroke="white" stroke-width="2"/></svg></button></div></div>`;
+      let element = `<div class="item" data-index="${index}"><div class="info" id="info"><h4>${foods[index]['name']}</h4><p>${foods[index]['carbs_per_100g']}g of carbs - 100g</p></div><div class="remove"><input type="number" min="0" max="100000" data-index="${index}" class="carbs-input" value="100"><button class="remove-button" data-index=${index}><svg width="10" height="10" viewBox="0 0 14 14"><line x1="1" y1="1" x2="13" y2="13" stroke="white" stroke-width="2"/><line x1="13" y1="1" x2="1" y2="13" stroke="white" stroke-width="2"/></svg></button></div></div>`;
       let oldValue = total_carbs;
+      
 
       items.push(foods[index]["name"]);
       len++;
@@ -112,6 +114,7 @@ document.querySelectorAll(".element").forEach(btn => {
             oldValue = total_carbs;
             total_carbs -= (Number(document.querySelector(`.carbs-input[data-index="${index}"]`).value) / 100) * foods[index]["carbs_per_100g"];
             items.splice(i, 1);
+            len--;
 
             animateNumber(document.getElementById('total'), oldValue, total_carbs, 400, 1);
             document.querySelector(`.item[data-index="${index}"]`).remove();
@@ -127,23 +130,26 @@ document.querySelectorAll(".element").forEach(btn => {
     })
       
       let weight_input = document.querySelector(`.carbs-input[data-index="${index}"]`);
-      let current_weight = (weight_input.value / 100) * foods[index]["carbs_per_100g"];
+      let current_weight = (Number(weight_input.value) / 100) * foods[index]["carbs_per_100g"];
       
       // Allows to edit the weight of the selected food
       weight_input.addEventListener("input", () => 
       {
+        oldValue = total_carbs;
+        
         document.querySelector('.overlay').style.opacity = 0.8;
         document.querySelector('.message').style.opacity = 1;
-
-        oldValue = total_carbs;
+        
         total_carbs -= current_weight;
-        total_carbs += (weight_input.value / 100) * foods[index]["carbs_per_100g"];
+        current_weight = (Number(weight_input.value) / 100) * foods[index]["carbs_per_100g"]
+        total_carbs += current_weight;
 
         animateNumber(document.getElementById('total'), oldValue, total_carbs, 400, 1);
         calculate_pourcentage();
       })
 
       calculate_pourcentage();
+      floatting_point_reset();
     }
     else{
       let specified_item = document.querySelector(`.item[data-index="${index}"]`);
