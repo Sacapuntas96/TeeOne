@@ -87,8 +87,9 @@ document.querySelectorAll(".element").forEach(btn => {
     //  Case where the element isn't in the list yet
     if(!existant)
     {
-      let element = `<div class="item" data-index="${index}"><div class="info" id="info"><h4>${foods[index]['name']}</h4><p>${foods[index]['carbs_per_100g']}g of carbs - 100g</p></div><div class="remove"><input type="number" min="0" max="30000" data-index="${index}" class="carbs-input" value="100"><button class="remove-button" data-index=${index}><svg width="10" height="10" viewBox="0 0 14 14"><line x1="1" y1="1" x2="13" y2="13" stroke="white" stroke-width="2"/><line x1="13" y1="1" x2="1" y2="13" stroke="white" stroke-width="2"/></svg></button></div></div>`;
+      let element = `<div class="item" data-index="${index}"><div class="info" id="info"><h4>${foods[index]['name']}</h4><p>${foods[index]['carbs_per_100g']}g of carbs - 100g</p></div><div class="remove"><input type="number" min="0" max="100000" data-index="${index}" class="carbs-input" value="100"><button class="remove-button" data-index=${index}><svg width="10" height="10" viewBox="0 0 14 14"><line x1="1" y1="1" x2="13" y2="13" stroke="white" stroke-width="2"/><line x1="13" y1="1" x2="1" y2="13" stroke="white" stroke-width="2"/></svg></button></div></div>`;
       let oldValue = total_carbs;
+      
 
       items.push(foods[index]["name"]);
       len++;
@@ -127,17 +128,17 @@ document.querySelectorAll(".element").forEach(btn => {
     })
       
       let weight_input = document.querySelector(`.carbs-input[data-index="${index}"]`);
-      let current_weight = (weight_input.value / 100) * foods[index]["carbs_per_100g"];
-      
+      let current_weight = (Number(weight_input.value) / 100) * foods[index]["carbs_per_100g"];
+      oldValue = total_carbs;
       // Allows to edit the weight of the selected food
       weight_input.addEventListener("input", () => 
       {
         document.querySelector('.overlay').style.opacity = 0.8;
         document.querySelector('.message').style.opacity = 1;
-
-        oldValue = total_carbs;
+        
         total_carbs -= current_weight;
-        total_carbs += (weight_input.value / 100) * foods[index]["carbs_per_100g"];
+        current_weight = (Number(weight_input.value) / 100) * foods[index]["carbs_per_100g"]
+        total_carbs += current_weight;
 
         animateNumber(document.getElementById('total'), oldValue, total_carbs, 400, 1);
         calculate_pourcentage();
