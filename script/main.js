@@ -129,12 +129,19 @@ document.querySelectorAll(".element").forEach(btn => {
         floatting_point_reset();
     })
       
-      let weight_input = document.querySelector(`.carbs-input[data-index="${index}"]`);
-      let current_weight = (Number(weight_input.value) / 100) * foods[index]["carbs_per_100g"];
       
+      
+      
+      let current_weight;
+      let weight_input = document.querySelector(`.carbs-input[data-index="${index}"]`);
+      
+      current_weight = (Number(weight_input.value) / 100) * foods[index]["carbs_per_100g"];  
       // Allows to edit the weight of the selected food
       weight_input.addEventListener("input", () => 
       {
+        if(Number(weight_input.value) > 100000){
+          weight_input.value = 100000;
+        }
         oldValue = total_carbs;
         
         document.querySelector('.overlay').style.opacity = 0.8;
