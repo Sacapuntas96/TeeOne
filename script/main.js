@@ -56,10 +56,7 @@ function animateNumber(element, start, end, duration, precision) {
 
 // Adds all the elements to the listing
 for (let i = 0; i < Object.keys(foods).length; i++) {
-  let example = `<div class="element" data-index="${i}"><div class="info"><h4>${foods[i]["name"]}</h4><p>${foods[i]["carbs_per_100g"]}g of carbs - 100g</p></div><div class="button"><button class="add-button" ><svg width="15" height="15" viewBox="0 0 14 14">
-    <line x1="7" y1="1" x2="7" y2="13" stroke="white" stroke-width="2"/>
-    <line x1="1" y1="7" x2="13" y2="7" stroke="white" stroke-width="2"/>
-  </svg></button></div></div>`;
+  let example = `<div class="element" data-index="${i}"><div class="info"><h4>${foods[i]["name"]}</h4><p>${foods[i]["carbs_per_100g"]}g of carbs - 100g</p></div><div class="button"><button class="add-button" >Add</button></div></div>`;
   document.getElementById("listing").insertAdjacentHTML("beforeend", example);
 }
 
@@ -107,6 +104,8 @@ document.querySelectorAll(".element").forEach(btn => {
       let remove_button = document.querySelector(`.remove-button[data-index="${index}"]`);
       remove_button.addEventListener('click', () =>
       {
+        document.querySelector('.overlay').style.opacity = 0.8;
+        document.querySelector('.message').style.opacity = 1;
         for(let i = 0; i < len; i++)
         {
           if(items[i] == foods[index]["name"])
@@ -129,9 +128,6 @@ document.querySelectorAll(".element").forEach(btn => {
         floatting_point_reset();
     })
       
-      
-      
-      
       let current_weight;
       let weight_input = document.querySelector(`.carbs-input[data-index="${index}"]`);
       
@@ -153,6 +149,7 @@ document.querySelectorAll(".element").forEach(btn => {
 
         animateNumber(document.getElementById('total'), oldValue, total_carbs, 400, 1);
         calculate_pourcentage();
+        floatting_point_reset();
       })
 
       calculate_pourcentage();

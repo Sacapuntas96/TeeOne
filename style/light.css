@@ -76,6 +76,7 @@ h1, h2, h3, h4, h5, h6, p{
     border: 1px solid var(--grey-8);
     margin-bottom: 16px;
     margin-top: 8px;
+    transition: 0.15s ease;
 }
 
 .left-panel input[type="text"]::placeholder{
@@ -167,24 +168,22 @@ h1, h2, h3, h4, h5, h6, p{
 }
 
 .button button{
-    background-color: transparent;
-    color: var(--grey-1);
+    background-color: #E8873D;
+    color: white;
     border: 1px solid var(--grey-6);
-    background-color: var(--grey-6);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 20px;
-    height: 40px;
-    width: 40px;
-    
+    border-radius: 4px;
+    height: 30px;
+    width: 60px;
+    transition: 0.15s ease;
 }
 
 .button button:hover{
     transition: 0.15s ease;
     cursor: pointer;
     background-color: #e99656;
-    color: white;
     transform: translateY(-1px);
 }
 
@@ -261,6 +260,12 @@ input[type="number"]{
 input::placeholder{
     font-size: 10px;
     color: var(--grey-5);
+}
+
+.carbs-input::-webkit-outer-spin-button,
+.carbs-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .item button{
