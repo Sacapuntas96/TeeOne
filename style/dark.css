@@ -423,7 +423,7 @@ input::placeholder{
 }
 
 .message{
-    background-color: var(--grey-6);
+    background-color: var(--grey-8);
     width: fit-content;
     height: fit-content;
     padding: 10px 14px;
