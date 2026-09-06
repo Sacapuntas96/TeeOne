@@ -6,26 +6,33 @@ let extra_units = 0;
 let items = [];
 let len = 0;
 
-let dark_theme_enabled = true;
+let html = document.documentElement;
+const saved_theme = localStorage.getItem('theme');
 
-let current_color = "white";
+// Loads the saved theme even when the page is closed or refreshed
+if(saved_theme){
+    html.setAttribute('data-theme', saved_theme);
+}
 
-// Allows to change theme
-let theme_button = document.querySelector('.theme-button');
-theme_button.addEventListener('click', () =>{
-  let stylesheet = document.getElementById('theme');
-  if(dark_theme_enabled)
-  {
-    stylesheet.href = '../style/light.css';
-    dark_theme_enabled = false;
-    current_color = "black";
-  }
-  else
-  {
-    stylesheet.href = '../style/dark.css';
-    dark_theme_enabled = true;
-    current_color = "white";
-  }
+if(html.getAttribute('data-theme') == 'dark'){
+    document.querySelector('.theme-button').style.backgroundImage = "url(../images/theme_icon_light_button.svg)";
+}
+else{
+    document.querySelector('.theme-button').style.backgroundImage = "url(../images/theme_icon.svg)";
+}
+
+// Adds functionnality to the switch theme button
+document.querySelector('.theme-button').addEventListener('click', () =>{
+    if(html.getAttribute('data-theme') == 'dark'){
+        html.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        document.querySelector('.theme-button').style.backgroundImage = "url(../images/theme_icon.svg)";
+    }
+    else{
+        html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        document.querySelector('.theme-button').style.backgroundImage = "url(../images/theme_icon_light_button.svg)";
+    }
 })
 
 function floatting_point_reset(){
