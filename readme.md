@@ -1,58 +1,53 @@
-# [TeeOne](https://teeone.teeone-health.workers.dev)
+# TeeOne
 
-TeeOne is a lightweight web app for people with type 1 diabetes to track their carbohydrate intake and calculate insulin dosage in real time.
+**Count your carbs. Dose with confidence.**
+
+TeeOne is a lightweight web app for people managing type 1 diabetes — search a food database, build a meal, track total carbs against a daily goal, and calculate the insulin units to inject, all in a fast, theme-aware interface.
 
 ## Features
 
-- **Food search** — quickly search a built-in food database with carb values per 100g
-- **Carb tracker** — add foods to a running list, adjust portion size, and see your total carbs update live
-- **Daily carb goal** — set a target and track progress with a color-coded bar (red / yellow / green)
-- **Insulin dosage calculator** — enter your insulin-to-carb ratio and extra correction units to get the total units to inject
-- **Light / dark theme** — toggle between themes with a single click
-- **Recalculation alerts** — get notified when your inputs change and the result needs to be recalculated
+- 🔍 **Food search** — instantly search a database of 600+ foods by name, with a live result count
+- 🍽️ **Meal builder** — add foods to a cart, adjust the weight (in grams) per item, and see the carb total update live
+- 📊 **Progress bar** — visual, color-coded progress (red → yellow → green) toward your daily carb goal
+- 💉 **Insulin calculator** — computes units to inject from total carbs, your insulin-to-carb ratio, and any extra correction units
+- ⚠️ **Guardrails** — warns when adding a food already in the cart, and when calculating with an invalid dosage
+- ✨ **Animated totals** — smooth number-counting animation whenever the carb total or result changes
+- 🌗 **Light / Dark theme** — theme preference is saved and persisted across visits via `localStorage`
 
-## How it works
+## Tech Stack
 
-1. Search for a food item and add it to your cart.
-2. Adjust the weight (in grams) for each item — the total carb count updates automatically.
-3. Set your daily carb goal to track progress visually.
-4. Enter your insulin dosage (units per 10g of carbs) and any extra correction units.
-5. Click **Calculate** to get the total insulin units to inject.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
-## Tech stack
+No framework
 
-- HTML / CSS / vanilla JavaScript
-- No build tools or frameworks — runs directly in the browser
-
-## Project structure
+## Project Structure
 
 ```
 TeeOne/
-├── index.html
+├── html/
+│   └── index.html          # App markup (search, cart, dosage inputs, results)
 ├── script/
-│   ├── main.js
-│   └── food.js
+│   ├── main.js              # App logic (cart, progress bar, insulin calc, theming)
+│   └── food.js               # Food database (name + carbs per 100g)
 ├── style/
-│   ├── dark.css
-│   └── light.css
+│   └── style.css
 └── images/
-    └── logo.svg
+    ├── logo.svg
+    ├── theme_icon.svg
+    └── theme_icon_light_button.svg
 ```
 
-## Getting started
+## Getting Started
 
-Clone the repo and open `index.html` in your browser — no installation required.
-
-```bash
-git clone https://github.com/your-username/TeeOne.git
-cd TeeOne
-open index.html
-```
+1. Clone the repo
+   ```bash
+   git clone https://github.com/your-username/TeeOne.git
+   ```
+2. Open `html/index.html` in your browser (or serve the folder with a local server, e.g. `npx serve`)
+3. Search for foods, add them to your list, set your goal and dosage, and calculate
 
 ## Disclaimer
 
-TeeOne is a personal tracking tool and is **not a substitute for medical advice**. Always consult your healthcare provider or endocrinologist before making decisions about your insulin dosage.
-
-## License
-
-MIT
+TeeOne is a personal tracking tool, not a medical device. It is not a substitute for professional medical advice — always confirm insulin dosing with your healthcare provider.
