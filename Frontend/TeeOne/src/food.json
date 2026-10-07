@@ -1,0 +1,1657 @@
+[
+  {
+    "id": 1,
+    "name": "Alaska Pollock, raw",
+    "carbs_per_100g": 0.1
+  },
+  {
+    "id": 2,
+    "name": "Almond butter, creamy",
+    "carbs_per_100g": 21.2
+  },
+  {
+    "id": 3,
+    "name": "Almond milk, unsweetened, plain, refrigerated",
+    "carbs_per_100g": 0.7
+  },
+  {
+    "id": 4,
+    "name": "Almond milk, unsweetened, plain, shelf stable",
+    "carbs_per_100g": 0.3
+  },
+  {
+    "id": 5,
+    "name": "Anchovies, canned in olive oil, with salt, drained",
+    "carbs_per_100g": 2.4
+  },
+  {
+    "id": 6,
+    "name": "Apple juice, with added vitamin C, from concentrate, shelf stable",
+    "carbs_per_100g": 11.4
+  },
+  {
+    "id": 7,
+    "name": "Apples, fuji, with skin, raw",
+    "carbs_per_100g": 15.7
+  },
+  {
+    "id": 8,
+    "name": "Apples, gala, with skin, raw",
+    "carbs_per_100g": 14.8
+  },
+  {
+    "id": 9,
+    "name": "Apples, granny smith, with skin, raw",
+    "carbs_per_100g": 14.2
+  },
+  {
+    "id": 10,
+    "name": "Apples, granny smith, with skin, raw",
+    "carbs_per_100g": 14.1
+  },
+  {
+    "id": 11,
+    "name": "Apples, honeycrisp, with skin, raw",
+    "carbs_per_100g": 14.7
+  },
+  {
+    "id": 12,
+    "name": "Apples, red delicious, with skin, raw",
+    "carbs_per_100g": 14.8
+  },
+  {
+    "id": 13,
+    "name": "Applesauce, unsweetened, with added vitamin C",
+    "carbs_per_100g": 12.3
+  },
+  {
+    "id": 14,
+    "name": "Apricot, with skin, raw",
+    "carbs_per_100g": 10.2
+  },
+  {
+    "id": 15,
+    "name": "Arugula, baby, raw",
+    "carbs_per_100g": 5.4
+  },
+  {
+    "id": 16,
+    "name": "Asparagus, green, raw",
+    "carbs_per_100g": 5.1
+  },
+  {
+    "id": 17,
+    "name": "Avocado, Hass, peeled, raw",
+    "carbs_per_100g": 8.3
+  },
+  {
+    "id": 18,
+    "name": "Bananas, overripe, raw",
+    "carbs_per_100g": 20.1
+  },
+  {
+    "id": 19,
+    "name": "Bananas, ripe and slightly ripe, raw",
+    "carbs_per_100g": 23.0
+  },
+  {
+    "id": 20,
+    "name": "Beans, black, canned, sodium added, drained and rinsed",
+    "carbs_per_100g": 19.8
+  },
+  {
+    "id": 21,
+    "name": "Beans, cannellini, canned, sodium added, drained and rinsed",
+    "carbs_per_100g": 18.8
+  },
+  {
+    "id": 22,
+    "name": "Beans, cannellini, dry",
+    "carbs_per_100g": 59.8
+  },
+  {
+    "id": 23,
+    "name": "Beans, great northern, canned, sodium added, drained and rinsed",
+    "carbs_per_100g": 19.3
+  },
+  {
+    "id": 24,
+    "name": "Beans, kidney, dark red, canned, sodium added, sugar added, drained and rinsed",
+    "carbs_per_100g": 21.0
+  },
+  {
+    "id": 25,
+    "name": "Beans, kidney, light red, canned, sodium added, sugar added, drained and rinsed",
+    "carbs_per_100g": 21.4
+  },
+  {
+    "id": 26,
+    "name": "Beans, navy, canned, sodium added, drained and rinsed",
+    "carbs_per_100g": 20.0
+  },
+  {
+    "id": 27,
+    "name": "Beans, pinto, canned, sodium added, drained and rinsed",
+    "carbs_per_100g": 19.6
+  },
+  {
+    "id": 28,
+    "name": "Beans, snap, green, canned, regular pack, drained solids",
+    "carbs_per_100g": 4.1
+  },
+  {
+    "id": 29,
+    "name": "Beans, snap, green, raw",
+    "carbs_per_100g": 7.4
+  },
+  {
+    "id": 30,
+    "name": "Beef, chuck, roast, boneless, choice, raw",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 31,
+    "name": "Beef, flank, steak, boneless, choice, raw",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 32,
+    "name": "Beef, ground, 80% lean meat / 20% fat, raw",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 33,
+    "name": "Beef, ground, 90% lean meat / 10% fat, raw",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 34,
+    "name": "Beef, loin, tenderloin roast, separable lean only, boneless, trimmed to 0\" fat, select, cooked, roasted",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 35,
+    "name": "Beef, loin, top loin steak, boneless, lip-on, separable lean only, trimmed to 1/8\" fat, choice, raw",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 36,
+    "name": "Beef, ribeye, steak, boneless, choice, raw",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 37,
+    "name": "Beef, round, eye of round roast, boneless, separable lean only, trimmed to 0\" fat, select, raw",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 38,
+    "name": "Beef, round, top round roast, boneless, separable lean only, trimmed to 0\" fat, select, raw",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 39,
+    "name": "Beef, round, top round, boneless, choice, raw",
+    "carbs_per_100g": 0.9
+  },
+  {
+    "id": 40,
+    "name": "Beef, short loin (NY strip steak), raw",
+    "carbs_per_100g": 0.2
+  },
+  {
+    "id": 41,
+    "name": "Beef, short loin, porterhouse steak, separable lean only, trimmed to 1/8\" fat, select, raw",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 42,
+    "name": "Beef, short loin, t-bone steak, bone-in, separable lean only, trimmed to 1/8\" fat, choice, cooked, grilled",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 43,
+    "name": "Beef, top sirloin steak, raw",
+    "carbs_per_100g": 0.2
+  },
+  {
+    "id": 44,
+    "name": "Beef, tenderloin steak, raw",
+    "carbs_per_100g": 0.2
+  },
+  {
+    "id": 45,
+    "name": "Beet greens, raw",
+    "carbs_per_100g": 4.7
+  },
+  {
+    "id": 46,
+    "name": "Beets, raw",
+    "carbs_per_100g": 8.8
+  },
+  {
+    "id": 47,
+    "name": "Bison, ground, raw",
+    "carbs_per_100g": -0.1
+  },
+  {
+    "id": 48,
+    "name": "Blackeye pea, canned, sodium added, drained and rinsed",
+    "carbs_per_100g": 19.2
+  },
+  {
+    "id": 49,
+    "name": "Blackeye pea, dry",
+    "carbs_per_100g": 61.8
+  },
+  {
+    "id": 50,
+    "name": "Blueberries, raw",
+    "carbs_per_100g": 14.6
+  },
+  {
+    "id": 51,
+    "name": "Bread, white, commercially prepared",
+    "carbs_per_100g": 49.2
+  },
+  {
+    "id": 52,
+    "name": "Bread, whole-wheat, commercially prepared",
+    "carbs_per_100g": 43.1
+  },
+  {
+    "id": 53,
+    "name": "Broccoli, raw",
+    "carbs_per_100g": 6.3
+  },
+  {
+    "id": 54,
+    "name": "Brussels sprouts, raw",
+    "carbs_per_100g": 9.6
+  },
+  {
+    "id": 55,
+    "name": "Buckwheat, whole grain",
+    "carbs_per_100g": 71.1
+  },
+  {
+    "id": 56,
+    "name": "Bulgur, dry, raw",
+    "carbs_per_100g": 75.9
+  },
+  {
+    "id": 57,
+    "name": "Buttermilk, low fat",
+    "carbs_per_100g": 4.8
+  },
+  {
+    "id": 58,
+    "name": "Cabbage, bok choy, raw",
+    "carbs_per_100g": 3.5
+  },
+  {
+    "id": 59,
+    "name": "Cabbage, green, raw",
+    "carbs_per_100g": 6.4
+  },
+  {
+    "id": 60,
+    "name": "Cabbage, red, raw",
+    "carbs_per_100g": 6.8
+  },
+  {
+    "id": 61,
+    "name": "Carrots, baby, raw",
+    "carbs_per_100g": 9.1
+  },
+  {
+    "id": 62,
+    "name": "Carrots, frozen, unprepared",
+    "carbs_per_100g": 7.9
+  },
+  {
+    "id": 63,
+    "name": "Carrots, frozen, unprepared (Includes foods for USDA's Food Distribution Program)",
+    "carbs_per_100g": 7.9
+  },
+  {
+    "id": 64,
+    "name": "Carrots, mature, raw",
+    "carbs_per_100g": 10.3
+  },
+  {
+    "id": 65,
+    "name": "Cauliflower, raw",
+    "carbs_per_100g": 4.7
+  },
+  {
+    "id": 66,
+    "name": "Celery, raw",
+    "carbs_per_100g": 3.3
+  },
+  {
+    "id": 67,
+    "name": "Cheese, American, restaurant",
+    "carbs_per_100g": 6.3
+  },
+  {
+    "id": 68,
+    "name": "Cheese, cheddar",
+    "carbs_per_100g": 2.4
+  },
+  {
+    "id": 69,
+    "name": "Cheese, cotija, solid",
+    "carbs_per_100g": 2.7
+  },
+  {
+    "id": 70,
+    "name": "Cheese, cottage, lowfat, 1% milkfat",
+    "carbs_per_100g": 4.3
+  },
+  {
+    "id": 71,
+    "name": "Cheese, dry white, queso seco",
+    "carbs_per_100g": 2.1
+  },
+  {
+    "id": 72,
+    "name": "Cheese, feta, whole milk, crumbled",
+    "carbs_per_100g": 5.6
+  },
+  {
+    "id": 73,
+    "name": "Cheese, monterey jack, solid",
+    "carbs_per_100g": 1.9
+  },
+  {
+    "id": 74,
+    "name": "Cheese, mozzarella, low moisture, part-skim",
+    "carbs_per_100g": 4.4
+  },
+  {
+    "id": 75,
+    "name": "Cheese, oaxaca, solid",
+    "carbs_per_100g": 2.4
+  },
+  {
+    "id": 76,
+    "name": "Cheese, parmesan, grated",
+    "carbs_per_100g": 12.4
+  },
+  {
+    "id": 77,
+    "name": "Cheese, parmesan, grated, refrigerated",
+    "carbs_per_100g": 4.3
+  },
+  {
+    "id": 78,
+    "name": "Cheese, pasteurized process cheese food or product, American, singles",
+    "carbs_per_100g": 8.2
+  },
+  {
+    "id": 79,
+    "name": "Cheese, pasteurized process, American, vitamin D fortified",
+    "carbs_per_100g": 5.3
+  },
+  {
+    "id": 80,
+    "name": "Cheese, provolone, sliced",
+    "carbs_per_100g": 2.5
+  },
+  {
+    "id": 81,
+    "name": "Cheese, queso fresco, solid",
+    "carbs_per_100g": 3.0
+  },
+  {
+    "id": 82,
+    "name": "Cheese, ricotta, whole milk",
+    "carbs_per_100g": 6.9
+  },
+  {
+    "id": 83,
+    "name": "Cheese, swiss",
+    "carbs_per_100g": 1.4
+  },
+  {
+    "id": 84,
+    "name": "Cherries, sweet, dark red, raw",
+    "carbs_per_100g": 16.2
+  },
+  {
+    "id": 85,
+    "name": "Chia seeds, dry, raw",
+    "carbs_per_100g": 38.3
+  },
+  {
+    "id": 86,
+    "name": "Chicken, breast, boneless, skinless, raw",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 87,
+    "name": "Chicken, breast, meat and skin, raw",
+    "carbs_per_100g": -0.4
+  },
+  {
+    "id": 88,
+    "name": "Chicken, broiler or fryers, breast, skinless, boneless, meat only, cooked, braised",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 89,
+    "name": "Chicken, broilers or fryers, drumstick, meat only, cooked, braised",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 90,
+    "name": "Chicken, drumstick, meat and skin, raw",
+    "carbs_per_100g": -0.5
+  },
+  {
+    "id": 91,
+    "name": "Chicken, ground, with additives, raw",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 92,
+    "name": "Chicken, thigh, boneless, skinless, raw",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 93,
+    "name": "Chicken, thigh, meat and skin, raw",
+    "carbs_per_100g": -0.2
+  },
+  {
+    "id": 94,
+    "name": "Chicken, wing, meat and skin, raw",
+    "carbs_per_100g": -0.5
+  },
+  {
+    "id": 95,
+    "name": "Chickpeas (garbanzo beans, bengal gram), canned, sodium added, drained and rinsed",
+    "carbs_per_100g": 20.3
+  },
+  {
+    "id": 96,
+    "name": "Chickpeas, (garbanzo beans, bengal gram), dry",
+    "carbs_per_100g": 60.4
+  },
+  {
+    "id": 97,
+    "name": "Cod, Pacific or Alaskan, frozen, wild caught",
+    "carbs_per_100g": 0.5
+  },
+  {
+    "id": 98,
+    "name": "Collards, raw",
+    "carbs_per_100g": 7.0
+  },
+  {
+    "id": 99,
+    "name": "Cookies, oatmeal, soft, with raisins",
+    "carbs_per_100g": 69.6
+  },
+  {
+    "id": 100,
+    "name": "Corn flour, masa harina, white or yellow, dry, raw",
+    "carbs_per_100g": 76.7
+  },
+  {
+    "id": 101,
+    "name": "Corn, sweet, yellow and white kernels,  fresh, raw",
+    "carbs_per_100g": 14.7
+  },
+  {
+    "id": 102,
+    "name": "Cottage cheese, full fat, large or small curd",
+    "carbs_per_100g": 4.6
+  },
+  {
+    "id": 103,
+    "name": "Cranberry juice, not fortified, from concentrate, shelf stable",
+    "carbs_per_100g": 7.3
+  },
+  {
+    "id": 104,
+    "name": "Cream cheese, full fat, block",
+    "carbs_per_100g": 4.6
+  },
+  {
+    "id": 105,
+    "name": "Cream, heavy",
+    "carbs_per_100g": 3.8
+  },
+  {
+    "id": 106,
+    "name": "Cream, sour, full fat",
+    "carbs_per_100g": 5.6
+  },
+  {
+    "id": 107,
+    "name": "Crustaceans, crab, blue swimming, lump, pasteurized, refrigerated",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 108,
+    "name": "Crustaceans, shrimp, farm raised, raw",
+    "carbs_per_100g": 0.5
+  },
+  {
+    "id": 109,
+    "name": "Cucumber, with peel, raw",
+    "carbs_per_100g": 3.0
+  },
+  {
+    "id": 110,
+    "name": "Egg, white, dried",
+    "carbs_per_100g": 6.0
+  },
+  {
+    "id": 111,
+    "name": "Egg, white, raw, frozen, pasteurized",
+    "carbs_per_100g": 0.7
+  },
+  {
+    "id": 112,
+    "name": "Egg, whole, dried",
+    "carbs_per_100g": 1.9
+  },
+  {
+    "id": 113,
+    "name": "Egg, whole, raw, frozen, pasteurized",
+    "carbs_per_100g": 0.9
+  },
+  {
+    "id": 114,
+    "name": "Egg, yolk, dried",
+    "carbs_per_100g": 1.1
+  },
+  {
+    "id": 115,
+    "name": "Egg, yolk, raw, frozen, pasteurized",
+    "carbs_per_100g": 0.6
+  },
+  {
+    "id": 116,
+    "name": "Eggplant, raw",
+    "carbs_per_100g": 5.4
+  },
+  {
+    "id": 117,
+    "name": "Eggs, Grade A, Large, egg white",
+    "carbs_per_100g": 2.4
+  },
+  {
+    "id": 118,
+    "name": "Eggs, Grade A, Large, egg whole",
+    "carbs_per_100g": 1.0
+  },
+  {
+    "id": 119,
+    "name": "Eggs, Grade A, Large, egg yolk",
+    "carbs_per_100g": 1.0
+  },
+  {
+    "id": 120,
+    "name": "Einkorn, grain, dry, raw",
+    "carbs_per_100g": 68.7
+  },
+  {
+    "id": 121,
+    "name": "Farro, pearled, dry, raw",
+    "carbs_per_100g": 72.1
+  },
+  {
+    "id": 122,
+    "name": "Fennel, bulb, raw",
+    "carbs_per_100g": 5.5
+  },
+  {
+    "id": 123,
+    "name": "Figs, dried, uncooked",
+    "carbs_per_100g": 63.9
+  },
+  {
+    "id": 124,
+    "name": "Fish, catfish, farm raised, raw",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 125,
+    "name": "Fish, cod, Atlantic, wild caught, raw",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 126,
+    "name": "Fish, haddock, raw",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 127,
+    "name": "Fish, pollock, raw",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 128,
+    "name": "Fish, salmon, Atlantic, farm raised, raw",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 129,
+    "name": "Fish, salmon, sockeye, wild caught, raw",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 130,
+    "name": "Fish, tilapia, farm raised, raw",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 131,
+    "name": "Fish, tuna, light, canned in water, drained solids",
+    "carbs_per_100g": 0.1
+  },
+  {
+    "id": 132,
+    "name": "Flaxseed, ground",
+    "carbs_per_100g": 34.4
+  },
+  {
+    "id": 133,
+    "name": "Flour, 00",
+    "carbs_per_100g": 74.4
+  },
+  {
+    "id": 134,
+    "name": "Flour, almond",
+    "carbs_per_100g": 16.2
+  },
+  {
+    "id": 135,
+    "name": "Flour, amaranth",
+    "carbs_per_100g": 68.8
+  },
+  {
+    "id": 136,
+    "name": "Flour, barley",
+    "carbs_per_100g": 77.4
+  },
+  {
+    "id": 137,
+    "name": "Flour, bread, white, enriched, unbleached",
+    "carbs_per_100g": 72.8
+  },
+  {
+    "id": 138,
+    "name": "Flour, buckwheat",
+    "carbs_per_100g": 75.0
+  },
+  {
+    "id": 139,
+    "name": "Flour, cassava",
+    "carbs_per_100g": 87.3
+  },
+  {
+    "id": 140,
+    "name": "Flour, chestnut",
+    "carbs_per_100g": 80.5
+  },
+  {
+    "id": 141,
+    "name": "Flour, coconut",
+    "carbs_per_100g": 58.9
+  },
+  {
+    "id": 142,
+    "name": "Flour, corn, yellow, fine meal, enriched",
+    "carbs_per_100g": 80.8
+  },
+  {
+    "id": 143,
+    "name": "Flour, oat, whole grain",
+    "carbs_per_100g": 69.9
+  },
+  {
+    "id": 144,
+    "name": "Flour, pastry, unenriched, unbleached",
+    "carbs_per_100g": 77.2
+  },
+  {
+    "id": 145,
+    "name": "Flour, potato",
+    "carbs_per_100g": 79.9
+  },
+  {
+    "id": 146,
+    "name": "Flour, quinoa",
+    "carbs_per_100g": 69.5
+  },
+  {
+    "id": 147,
+    "name": "Flour, rice, brown",
+    "carbs_per_100g": 75.5
+  },
+  {
+    "id": 148,
+    "name": "Flour, rice, glutinous",
+    "carbs_per_100g": 80.1
+  },
+  {
+    "id": 149,
+    "name": "Flour, rice, white, unenriched",
+    "carbs_per_100g": 79.8
+  },
+  {
+    "id": 150,
+    "name": "Flour, rye",
+    "carbs_per_100g": 77.2
+  },
+  {
+    "id": 151,
+    "name": "Flour, semolina, coarse and semi-coarse",
+    "carbs_per_100g": 73.8
+  },
+  {
+    "id": 152,
+    "name": "Flour, semolina, fine",
+    "carbs_per_100g": 72.0
+  },
+  {
+    "id": 153,
+    "name": "Flour, sorghum",
+    "carbs_per_100g": 77.4
+  },
+  {
+    "id": 154,
+    "name": "Flour, soy, defatted",
+    "carbs_per_100g": 32.9
+  },
+  {
+    "id": 155,
+    "name": "Flour, soy, full-fat",
+    "carbs_per_100g": 27.9
+  },
+  {
+    "id": 156,
+    "name": "Flour, spelt, whole grain",
+    "carbs_per_100g": 70.7
+  },
+  {
+    "id": 157,
+    "name": "Flour, wheat, all-purpose, enriched, bleached",
+    "carbs_per_100g": 77.3
+  },
+  {
+    "id": 158,
+    "name": "Flour, wheat, all-purpose, enriched, unbleached",
+    "carbs_per_100g": 73.2
+  },
+  {
+    "id": 159,
+    "name": "Flour, wheat, all-purpose, unenriched, unbleached",
+    "carbs_per_100g": 74.6
+  },
+  {
+    "id": 160,
+    "name": "Flour, whole wheat, unenriched",
+    "carbs_per_100g": 71.2
+  },
+  {
+    "id": 161,
+    "name": "Fonio, grain, dry, raw",
+    "carbs_per_100g": 81.3
+  },
+  {
+    "id": 162,
+    "name": "Frankfurter, beef, unheated",
+    "carbs_per_100g": 2.9
+  },
+  {
+    "id": 163,
+    "name": "Garlic, raw",
+    "carbs_per_100g": 28.2
+  },
+  {
+    "id": 164,
+    "name": "Grape juice, purple, with added vitamin C, from concentrate, shelf stable",
+    "carbs_per_100g": 15.6
+  },
+  {
+    "id": 165,
+    "name": "Grape juice, white, with added vitamin C, from concentrate, shelf stable",
+    "carbs_per_100g": 15.8
+  },
+  {
+    "id": 166,
+    "name": "Grapefruit juice, red, not fortified, not from concentrate, refrigerated",
+    "carbs_per_100g": 9.1
+  },
+  {
+    "id": 167,
+    "name": "Grapefruit juice, white, canned or bottled, unsweetened",
+    "carbs_per_100g": 7.6
+  },
+  {
+    "id": 168,
+    "name": "Grapes, green, seedless, raw",
+    "carbs_per_100g": 18.6
+  },
+  {
+    "id": 169,
+    "name": "Grapes, red, seedless, raw",
+    "carbs_per_100g": 20.2
+  },
+  {
+    "id": 170,
+    "name": "Halibut, frozen, wild caught",
+    "carbs_per_100g": -0.1
+  },
+  {
+    "id": 171,
+    "name": "Ham, sliced, pre-packaged, deli meat (96%fat free, water added)",
+    "carbs_per_100g": 0.3
+  },
+  {
+    "id": 172,
+    "name": "Ham, sliced, restaurant",
+    "carbs_per_100g": 2.4
+  },
+  {
+    "id": 173,
+    "name": "Hummus, commercial",
+    "carbs_per_100g": 14.9
+  },
+  {
+    "id": 174,
+    "name": "Kale, frozen, cooked, boiled, drained, without salt",
+    "carbs_per_100g": 5.3
+  },
+  {
+    "id": 175,
+    "name": "Kale, raw",
+    "carbs_per_100g": 4.4
+  },
+  {
+    "id": 176,
+    "name": "Ketchup, restaurant",
+    "carbs_per_100g": 26.8
+  },
+  {
+    "id": 177,
+    "name": "Khorasan, grain, dry, raw",
+    "carbs_per_100g": 71.8
+  },
+  {
+    "id": 178,
+    "name": "Kiwifruit (kiwi), green, peeled, raw",
+    "carbs_per_100g": 13.8
+  },
+  {
+    "id": 179,
+    "name": "Kiwifruit, green, raw",
+    "carbs_per_100g": 14.0
+  },
+  {
+    "id": 180,
+    "name": "Lamb, ground, raw",
+    "carbs_per_100g": -0.3
+  },
+  {
+    "id": 181,
+    "name": "Lentils, dry",
+    "carbs_per_100g": 62.2
+  },
+  {
+    "id": 182,
+    "name": "Lettuce, cos or romaine, raw",
+    "carbs_per_100g": 3.2
+  },
+  {
+    "id": 183,
+    "name": "Lettuce, iceberg, raw",
+    "carbs_per_100g": 3.4
+  },
+  {
+    "id": 184,
+    "name": "Lettuce, leaf, green, raw",
+    "carbs_per_100g": 4.1
+  },
+  {
+    "id": 185,
+    "name": "Lettuce, leaf, red, raw",
+    "carbs_per_100g": 3.3
+  },
+  {
+    "id": 186,
+    "name": "Lettuce, romaine, green, raw",
+    "carbs_per_100g": 4.1
+  },
+  {
+    "id": 187,
+    "name": "Lobster, tail only, frozen, wild caught",
+    "carbs_per_100g": 0.9
+  },
+  {
+    "id": 188,
+    "name": "Mahi mahi, frozen, wild caught",
+    "carbs_per_100g": 0.3
+  },
+  {
+    "id": 189,
+    "name": "Mandarin, seedless, peeled, raw",
+    "carbs_per_100g": 13.4
+  },
+  {
+    "id": 190,
+    "name": "Mango, Ataulfo, peeled, raw",
+    "carbs_per_100g": 17.4
+  },
+  {
+    "id": 191,
+    "name": "Mango, Tommy Atkins, peeled, raw",
+    "carbs_per_100g": 15.3
+  },
+  {
+    "id": 192,
+    "name": "Melons, cantaloupe, raw",
+    "carbs_per_100g": 8.2
+  },
+  {
+    "id": 193,
+    "name": "Melons, honeydew, raw",
+    "carbs_per_100g": 8.1
+  },
+  {
+    "id": 194,
+    "name": "Milk, lowfat, fluid, 1% milkfat, with added vitamin A and vitamin D",
+    "carbs_per_100g": 5.2
+  },
+  {
+    "id": 195,
+    "name": "Milk, nonfat, fluid, with added vitamin A and vitamin D (fat free or skim)",
+    "carbs_per_100g": 4.9
+  },
+  {
+    "id": 196,
+    "name": "Milk, reduced fat, fluid, 1% milkfat, with added vitamin A and vitamin D",
+    "carbs_per_100g": 4.9
+  },
+  {
+    "id": 197,
+    "name": "Milk, whole, 3.25% milkfat, with added vitamin D",
+    "carbs_per_100g": 4.7
+  },
+  {
+    "id": 198,
+    "name": "Milk, whole, 3.25% milkfat, with added vitamin D",
+    "carbs_per_100g": 4.6
+  },
+  {
+    "id": 199,
+    "name": "Millet, whole grain",
+    "carbs_per_100g": 74.4
+  },
+  {
+    "id": 200,
+    "name": "Mushroom, beech",
+    "carbs_per_100g": 6.8
+  },
+  {
+    "id": 201,
+    "name": "Mushroom, crimini",
+    "carbs_per_100g": 4.0
+  },
+  {
+    "id": 202,
+    "name": "Mushroom, enoki",
+    "carbs_per_100g": 8.1
+  },
+  {
+    "id": 203,
+    "name": "Mushroom, king oyster",
+    "carbs_per_100g": 8.5
+  },
+  {
+    "id": 204,
+    "name": "Mushroom, lion's mane",
+    "carbs_per_100g": 7.6
+  },
+  {
+    "id": 205,
+    "name": "Mushroom, maitake",
+    "carbs_per_100g": 6.6
+  },
+  {
+    "id": 206,
+    "name": "Mushroom, oyster",
+    "carbs_per_100g": 6.9
+  },
+  {
+    "id": 207,
+    "name": "Mushroom, pioppini",
+    "carbs_per_100g": 5.8
+  },
+  {
+    "id": 208,
+    "name": "Mushroom, portabella",
+    "carbs_per_100g": 4.7
+  },
+  {
+    "id": 209,
+    "name": "Mushrooms, shiitake",
+    "carbs_per_100g": 8.2
+  },
+  {
+    "id": 210,
+    "name": "Mushrooms, white button",
+    "carbs_per_100g": 4.1
+  },
+  {
+    "id": 211,
+    "name": "Mustard, prepared, yellow",
+    "carbs_per_100g": 5.3
+  },
+  {
+    "id": 212,
+    "name": "Nectarines, raw",
+    "carbs_per_100g": 9.2
+  },
+  {
+    "id": 213,
+    "name": "Nuts, almonds, dry roasted, with salt added",
+    "carbs_per_100g": 16.2
+  },
+  {
+    "id": 214,
+    "name": "Nuts, almonds, whole, raw",
+    "carbs_per_100g": 20.0
+  },
+  {
+    "id": 215,
+    "name": "Nuts, brazilnuts, raw",
+    "carbs_per_100g": 21.6
+  },
+  {
+    "id": 216,
+    "name": "Nuts, cashew nuts, raw",
+    "carbs_per_100g": 36.3
+  },
+  {
+    "id": 217,
+    "name": "Nuts, hazelnuts or filberts, raw",
+    "carbs_per_100g": 26.5
+  },
+  {
+    "id": 218,
+    "name": "Nuts, macadamia nuts, raw",
+    "carbs_per_100g": 24.1
+  },
+  {
+    "id": 219,
+    "name": "Nuts, pecans, halves, raw",
+    "carbs_per_100g": 12.7
+  },
+  {
+    "id": 220,
+    "name": "Nuts, pine nuts, raw",
+    "carbs_per_100g": 18.6
+  },
+  {
+    "id": 221,
+    "name": "Nuts, pistachio nuts, raw",
+    "carbs_per_100g": 27.7
+  },
+  {
+    "id": 222,
+    "name": "Nuts, walnuts, English, halves, raw",
+    "carbs_per_100g": 10.9
+  },
+  {
+    "id": 223,
+    "name": "Oat milk, unsweetened, plain, refrigerated",
+    "carbs_per_100g": 5.1
+  },
+  {
+    "id": 224,
+    "name": "Oats, whole grain, rolled, old fashioned",
+    "carbs_per_100g": 68.7
+  },
+  {
+    "id": 225,
+    "name": "Oats, whole grain, steel cut",
+    "carbs_per_100g": 69.8
+  },
+  {
+    "id": 226,
+    "name": "Oil, coconut",
+    "carbs_per_100g": 0.8
+  },
+  {
+    "id": 227,
+    "name": "Olives, green, Manzanilla, stuffed with pimiento",
+    "carbs_per_100g": 5.0
+  },
+  {
+    "id": 228,
+    "name": "Onion rings, breaded, par fried, frozen, prepared, heated in oven",
+    "carbs_per_100g": 36.3
+  },
+  {
+    "id": 229,
+    "name": "Onions, red, raw",
+    "carbs_per_100g": 9.9
+  },
+  {
+    "id": 230,
+    "name": "Onions, white, raw",
+    "carbs_per_100g": 7.7
+  },
+  {
+    "id": 231,
+    "name": "Onions, yellow, raw",
+    "carbs_per_100g": 8.6
+  },
+  {
+    "id": 232,
+    "name": "Orange juice, no pulp, not fortified, from concentrate, refrigerated",
+    "carbs_per_100g": 10.3
+  },
+  {
+    "id": 233,
+    "name": "Orange juice, no pulp, not fortified, not from concentrate, refrigerated",
+    "carbs_per_100g": 10.0
+  },
+  {
+    "id": 234,
+    "name": "Oranges, raw, navels",
+    "carbs_per_100g": 11.8
+  },
+  {
+    "id": 235,
+    "name": "Oranges, raw, navels (Includes foods for USDA's Food Distribution Program)",
+    "carbs_per_100g": 11.8
+  },
+  {
+    "id": 236,
+    "name": "Parsnips, raw",
+    "carbs_per_100g": 19.3
+  },
+  {
+    "id": 237,
+    "name": "Peaches, yellow, raw",
+    "carbs_per_100g": 10.1
+  },
+  {
+    "id": 238,
+    "name": "Peanut butter, creamy",
+    "carbs_per_100g": 22.7
+  },
+  {
+    "id": 239,
+    "name": "Peanut butter, smooth style, with salt",
+    "carbs_per_100g": 22.3
+  },
+  {
+    "id": 240,
+    "name": "Peanuts, raw",
+    "carbs_per_100g": 26.5
+  },
+  {
+    "id": 241,
+    "name": "Pear, Anjou, green, with skin, raw",
+    "carbs_per_100g": 14.8
+  },
+  {
+    "id": 242,
+    "name": "Pears, raw, bartlett",
+    "carbs_per_100g": 15.1
+  },
+  {
+    "id": 243,
+    "name": "Pears, raw, bartlett (Includes foods for USDA's Food Distribution Program)",
+    "carbs_per_100g": 15.1
+  },
+  {
+    "id": 244,
+    "name": "Peas, green, sweet, canned, sodium added, sugar added, drained and rinsed",
+    "carbs_per_100g": 12.7
+  },
+  {
+    "id": 245,
+    "name": "Peppers, banana or Hungarian wax, seeded, raw",
+    "carbs_per_100g": 5.0
+  },
+  {
+    "id": 246,
+    "name": "Peppers, bell, green, raw",
+    "carbs_per_100g": 4.8
+  },
+  {
+    "id": 247,
+    "name": "Peppers, bell, orange, raw",
+    "carbs_per_100g": 6.7
+  },
+  {
+    "id": 248,
+    "name": "Peppers, bell, red, raw",
+    "carbs_per_100g": 6.7
+  },
+  {
+    "id": 249,
+    "name": "Peppers, bell, yellow, raw",
+    "carbs_per_100g": 6.6
+  },
+  {
+    "id": 250,
+    "name": "Peppers, jalapeno, seeded, raw",
+    "carbs_per_100g": 5.1
+  },
+  {
+    "id": 251,
+    "name": "Peppers, poblano, seeded, raw",
+    "carbs_per_100g": 5.1
+  },
+  {
+    "id": 252,
+    "name": "Peppers, serrano, seeded, raw",
+    "carbs_per_100g": 6.1
+  },
+  {
+    "id": 253,
+    "name": "Pickles, cucumber, dill or kosher dill",
+    "carbs_per_100g": 2.0
+  },
+  {
+    "id": 254,
+    "name": "Pineapple, raw",
+    "carbs_per_100g": 14.1
+  },
+  {
+    "id": 255,
+    "name": "Plantains, overripe, raw",
+    "carbs_per_100g": 29.2
+  },
+  {
+    "id": 256,
+    "name": "Plantains, ripe, raw",
+    "carbs_per_100g": 31.0
+  },
+  {
+    "id": 257,
+    "name": "Plantains, underripe, raw",
+    "carbs_per_100g": 33.6
+  },
+  {
+    "id": 258,
+    "name": "Plum, black, with skin, raw",
+    "carbs_per_100g": 13.5
+  },
+  {
+    "id": 259,
+    "name": "Pork, belly, with skin, raw",
+    "carbs_per_100g": -0.7
+  },
+  {
+    "id": 260,
+    "name": "Pork, chop, center cut, raw",
+    "carbs_per_100g": -0.6
+  },
+  {
+    "id": 261,
+    "name": "Pork, cured, bacon, cooked, restaurant",
+    "carbs_per_100g": 2.1
+  },
+  {
+    "id": 262,
+    "name": "Pork, ground, raw",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 263,
+    "name": "Pork, loin, boneless, raw",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 264,
+    "name": "Pork, loin, tenderloin, boneless, raw",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 265,
+    "name": "Potatoes, gold, without skin, raw",
+    "carbs_per_100g": 16.0
+  },
+  {
+    "id": 266,
+    "name": "Potatoes, red, without skin, raw",
+    "carbs_per_100g": 16.3
+  },
+  {
+    "id": 267,
+    "name": "Potatoes, russet, without skin, raw",
+    "carbs_per_100g": 17.8
+  },
+  {
+    "id": 268,
+    "name": "Radicchio, raw",
+    "carbs_per_100g": 5.0
+  },
+  {
+    "id": 269,
+    "name": "Radishes, red, raw",
+    "carbs_per_100g": 4.1
+  },
+  {
+    "id": 270,
+    "name": "Raspberries, raw",
+    "carbs_per_100g": 12.9
+  },
+  {
+    "id": 271,
+    "name": "Restaurant, Chinese, fried rice, without meat",
+    "carbs_per_100g": 32.5
+  },
+  {
+    "id": 272,
+    "name": "Restaurant, Chinese, sweet and sour pork",
+    "carbs_per_100g": 25.5
+  },
+  {
+    "id": 273,
+    "name": "Restaurant, Latino, pupusas con frijoles (pupusas, bean)",
+    "carbs_per_100g": 31.5
+  },
+  {
+    "id": 274,
+    "name": "Restaurant, Latino, tamale, pork",
+    "carbs_per_100g": 15.8
+  },
+  {
+    "id": 275,
+    "name": "Rice, black, unenriched, raw",
+    "carbs_per_100g": 77.2
+  },
+  {
+    "id": 276,
+    "name": "Rice, brown, long grain, unenriched, raw",
+    "carbs_per_100g": 76.7
+  },
+  {
+    "id": 277,
+    "name": "Rice, red, unenriched, dry, raw",
+    "carbs_per_100g": 76.2
+  },
+  {
+    "id": 278,
+    "name": "Rice, white, long grain, unenriched, raw",
+    "carbs_per_100g": 80.3
+  },
+  {
+    "id": 279,
+    "name": "Sauce, pasta, spaghetti/marinara, ready-to-serve",
+    "carbs_per_100g": 8.1
+  },
+  {
+    "id": 280,
+    "name": "Sauce, salsa, ready-to-serve",
+    "carbs_per_100g": 6.7
+  },
+  {
+    "id": 281,
+    "name": "Sausage, Italian, pork, mild, cooked, pan-fried",
+    "carbs_per_100g": 2.1
+  },
+  {
+    "id": 282,
+    "name": "Sausage, breakfast sausage, beef, pre-cooked, unprepared",
+    "carbs_per_100g": 3.4
+  },
+  {
+    "id": 283,
+    "name": "Sausage, pork, chorizo, link or ground, cooked, pan-fried",
+    "carbs_per_100g": 2.6
+  },
+  {
+    "id": 284,
+    "name": "Sausage, turkey, breakfast links, mild, raw",
+    "carbs_per_100g": 0.9
+  },
+  {
+    "id": 285,
+    "name": "Scallops, bay, Patagonian, frozen, wild caught",
+    "carbs_per_100g": 2.3
+  },
+  {
+    "id": 286,
+    "name": "Scallops, sea, frozen, wild caught",
+    "carbs_per_100g": 2.0
+  },
+  {
+    "id": 287,
+    "name": "Sea bass, Chilean, frozen, wild caught",
+    "carbs_per_100g": 0.1
+  },
+  {
+    "id": 288,
+    "name": "Seeds, pumpkin seeds (pepitas), raw",
+    "carbs_per_100g": 18.7
+  },
+  {
+    "id": 289,
+    "name": "Seeds, sunflower seed kernels, dry roasted, with salt added",
+    "carbs_per_100g": 17.1
+  },
+  {
+    "id": 290,
+    "name": "Seeds, sunflower seed, kernel, raw",
+    "carbs_per_100g": 24.5
+  },
+  {
+    "id": 291,
+    "name": "Sesame butter, creamy",
+    "carbs_per_100g": 14.2
+  },
+  {
+    "id": 292,
+    "name": "Snapper, frozen, wild caught",
+    "carbs_per_100g": 0.4
+  },
+  {
+    "id": 293,
+    "name": "Snow crab, legs only, frozen  ",
+    "carbs_per_100g": 1.1
+  },
+  {
+    "id": 294,
+    "name": "Sorghum bran, white, unenriched, dry, raw",
+    "carbs_per_100g": 68.7
+  },
+  {
+    "id": 295,
+    "name": "Sorghum flour, white, pearled, unenriched, dry, raw",
+    "carbs_per_100g": 73.5
+  },
+  {
+    "id": 296,
+    "name": "Sorghum grain, white, pearled, unenriched, dry, raw",
+    "carbs_per_100g": 74.9
+  },
+  {
+    "id": 297,
+    "name": "Sorghum, whole grain, white, dry, raw",
+    "carbs_per_100g": 73.6
+  },
+  {
+    "id": 298,
+    "name": "Soy milk, sweetened, plain, refrigerated",
+    "carbs_per_100g": 3.0
+  },
+  {
+    "id": 299,
+    "name": "Soy milk, unsweetened, plain, shelf stable",
+    "carbs_per_100g": 1.3
+  },
+  {
+    "id": 300,
+    "name": "Spinach, baby",
+    "carbs_per_100g": 2.4
+  },
+  {
+    "id": 301,
+    "name": "Spinach, mature",
+    "carbs_per_100g": 2.6
+  },
+  {
+    "id": 302,
+    "name": "Squash, summer, green, zucchini, includes skin, raw",
+    "carbs_per_100g": 3.3
+  },
+  {
+    "id": 303,
+    "name": "Squash, summer, yellow, includes skin, raw",
+    "carbs_per_100g": 4.4
+  },
+  {
+    "id": 304,
+    "name": "Squash, winter, acorn, raw",
+    "carbs_per_100g": 10.5
+  },
+  {
+    "id": 305,
+    "name": "Squash, winter, butternut, raw",
+    "carbs_per_100g": 10.5
+  },
+  {
+    "id": 306,
+    "name": "Squid (calamari), frozen, tubes only",
+    "carbs_per_100g": 0.9
+  },
+  {
+    "id": 307,
+    "name": "Strawberries, raw",
+    "carbs_per_100g": 7.6
+  },
+  {
+    "id": 308,
+    "name": "Strawberries, raw",
+    "carbs_per_100g": 8.0
+  },
+  {
+    "id": 309,
+    "name": "Sugars, granulated",
+    "carbs_per_100g": 99.6
+  },
+  {
+    "id": 310,
+    "name": "Sweet potatoes, orange flesh, without skin, raw",
+    "carbs_per_100g": 17.3
+  },
+  {
+    "id": 311,
+    "name": "Swordfish, frozen, wild caught",
+    "carbs_per_100g": 0.4
+  },
+  {
+    "id": 312,
+    "name": "Tomato juice, with added ingredients, from concentrate, shelf stable",
+    "carbs_per_100g": 4.3
+  },
+  {
+    "id": 313,
+    "name": "Tomato, paste, canned, without salt added",
+    "carbs_per_100g": 20.2
+  },
+  {
+    "id": 314,
+    "name": "Tomato, puree, canned",
+    "carbs_per_100g": 8.0
+  },
+  {
+    "id": 315,
+    "name": "Tomato, roma",
+    "carbs_per_100g": 3.8
+  },
+  {
+    "id": 316,
+    "name": "Tomato, sauce, canned, with salt added",
+    "carbs_per_100g": 6.3
+  },
+  {
+    "id": 317,
+    "name": "Tomatoes, canned, red, ripe, diced",
+    "carbs_per_100g": 3.3
+  },
+  {
+    "id": 318,
+    "name": "Tomatoes, crushed, canned",
+    "carbs_per_100g": 7.1
+  },
+  {
+    "id": 319,
+    "name": "Tomatoes, grape, raw",
+    "carbs_per_100g": 5.5
+  },
+  {
+    "id": 320,
+    "name": "Tomatoes, whole, canned, solids and liquids, with salt added",
+    "carbs_per_100g": 4.3
+  },
+  {
+    "id": 321,
+    "name": "Tuna, ahi or yellowfin, frozen, wild caught",
+    "carbs_per_100g": -0.1
+  },
+  {
+    "id": 322,
+    "name": "Turkey, ground, 93% lean, 7% fat, pan-broiled crumbles",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 323,
+    "name": "Turkey, ground, 93% lean/ 7% fat, raw",
+    "carbs_per_100g": 0.0
+  },
+  {
+    "id": 324,
+    "name": "Turnips, raw",
+    "carbs_per_100g": 7.3
+  },
+  {
+    "id": 325,
+    "name": "Watermelon, seedless, rind only, raw",
+    "carbs_per_100g": 4.2
+  },
+  {
+    "id": 326,
+    "name": "Wild rice, dry, raw",
+    "carbs_per_100g": 75.7
+  },
+  {
+    "id": 327,
+    "name": "Yogurt, Greek, plain, nonfat",
+    "carbs_per_100g": 3.6
+  },
+  {
+    "id": 328,
+    "name": "Yogurt, Greek, plain, whole milk",
+    "carbs_per_100g": 4.8
+  },
+  {
+    "id": 329,
+    "name": "Yogurt, Greek, strawberry, nonfat",
+    "carbs_per_100g": 12.2
+  },
+  {
+    "id": 330,
+    "name": "Yogurt, plain, nonfat",
+    "carbs_per_100g": 8.1
+  },
+  {
+    "id": 331,
+    "name": "Yogurt, plain, whole milk",
+    "carbs_per_100g": 5.6
+  }
+]
