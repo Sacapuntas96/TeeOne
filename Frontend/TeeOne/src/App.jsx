@@ -11,23 +11,41 @@ if(!document.documentElement.getAttribute('data-theme')){
 }
 document.documentElement.setAttribute('data-theme', localStorage.getItem('stored_theme'))
 
-let items = []
 
 function App() {
+  const [items, SetItems] = useState([])
+
+  const AddItem = (item) => {
+    if(items.some(element => element.id === item.id)){
+      return
+    }
+    item["current_weight"] = '100'
+    SetItems(prev => [...prev, {...item, current_weight : '100'}])
+  }
+
+  const RemoveItem = (item) => {
+    SetItems(items.filter(element => element.id != item.id))
+  }
+
   const [current_theme, ChangeTheme] = useState(localStorage.getItem('stored_theme'))
   const SwitchTheme = (new_theme => {
     ChangeTheme(new_theme)
     localStorage.setItem('stored_theme', new_theme)
     document.documentElement.setAttribute('data-theme', new_theme)
   })
-  const [total_carbs, SetTotalCarbs] = useState(0)
-  const [goal, SetGoald] = useState(0)
-  const [insuline_units, SetUnits] = useState(0)
-  const [extra_units, SetExtraUnits] = useState(0)
+  
+  
+
+  const [goal, SetGoald] = useState('0')
+  const [insuline_units, SetUnits] = useState('0')
+  const [extra_units, SetExtraUnits] = useState('0')
+
   const [query, SetQuery] = useState('')
+
+  const total_carbs = calculate_total(items)
   const [total_units, SetTotalUnits] = useState(0)
 
-  const [recal, SetRecale] = useState(true)
+  const [recal, SetRecall] = useState(true)
 
   return (
     <>
@@ -38,10 +56,10 @@ function App() {
               <input type="text" placeholder="Bread, white - 100g" id="search-bar" onChange={() => SetQuery()}/>
             <div className="listing" id="listing">
               {food_data.map(item =>(
-                <FoodCard item={item} key={item.id} onClick={() => {if(!is_present(item.id)){
-                    items.push(item.id)
-                    SetTotalCarbs(total_carbs + item.carbs_per_100g)
-                    SetRecale(true)
+                <FoodCard item={item} key={item.id} onClick={() => {
+                  if(!is_present(item.id, items)){
+                    AddItem(item)
+                    SetRecall(true)
                     }}}/>
               ))}
             </div>
@@ -50,38 +68,40 @@ function App() {
             <div className="top-panel">
               <h2>Total -  <span id="total">{total_carbs.toFixed(1)}</span></h2>
               <div className="bar-track">
-                <div className="bar-fill" id="progress-bar" style={{width : (goal ? (total_carbs < goal ? (total_carbs / goal) * 100 : 100) : 0) + "%"}}></div>
+                <div className="bar-fill" id="progress-bar" style={{width : (Number(goal) ? (total_carbs < Number(goal) ? (total_carbs / Number(goal)) * 100 : 100) : 0) + "%"}}></div>
               </div>
               <div className="cart" id="cart">
-                
+                {items.map(item => (
+                  <div className="item" key={item.id}><div className="info" id="info"><h4>{item['name']}</h4><p>{item['carbs_per_100g']}g of carbs - 100g</p></div><div className="remove"><input type="number" min="0" max="100000" className="carbs-input" value="100" onChange={(event) => items.filter(element => element["id"] === item["id"])[0]["current_weight"] = event.target.value}/><button className="remove-button" onClick={() => RemoveItem(item)}><svg width="10" height="10" viewBox="0 0 14 14"><line x1="1" y1="1" x2="13" y2="13" stroke="white" strokeWidth="2"/><line x1="13" y1="1" x2="1" y2="13" stroke="white" strokeWidth="2"/></svg></button></div></div>
+                ))}
               </div>
             </div>
             <div className="bottom-panel">
               <div className="additionnal-info">
                 <h4>Goal</h4>
                 <input type="number" min="0" value={goal} id="goal" onChange={event => {
-                  SetGoald(Number(event.target. value))
-                  SetRecale(true)
+                  SetGoald(event.target.value)
+                  SetRecall(true)
                 }}/>
               </div>
               <div className="additionnal-info">
                 <h4>Insuline Units (per 10g)</h4>
                 <input type="number" min="0" id="dosage" value={insuline_units} onChange={event => {
-                  SetUnits(Number(event.target.value))
-                  SetRecale(true)
+                  SetUnits(event.target.value)
+                  SetRecall(true)
                 }}/>
               </div>
               <div className="additionnal-info">
                 <h4>Extra Units</h4>
                 <input type="number" min="0" value={extra_units} id="extra" onChange={event => {
-                  SetExtraUnits(Number(event.target.value))
-                  SetRecale(true)
+                  SetExtraUnits(event.target.value)
+                  SetRecall(true)
                   }}/>
               </div>
               <button id="calculate" onClick={() => {
                 if(insuline_units > 0){
-                  SetTotalUnits((total_carbs / insuline_units) + extra_units)
-                  SetRecale(false)
+                  SetTotalUnits((total_carbs / Number(insuline_units)) + Number(extra_units))
+                  SetRecall(false)
                 }
               }}>Calculate</button>
             </div>
@@ -110,8 +130,22 @@ function App() {
   )
 }
 
-function is_present(id){
-  return items.includes(id)
+function is_present(id, items){
+  for(let i = 0; i < items.length; i++){
+    if(items[i].id == id){
+      return true
+    } 
+  }
+  return false
+}
+
+function calculate_total(items){
+  let sum = 0
+  for(let i = 0; i < items.length; i++){
+    sum += Number(items[i]["carbs_per_100g"]) * (Number(items[i]["current_weight"]) / 100)
+  }
+
+  return sum
 }
 
 export default App
