@@ -39,9 +39,15 @@ function App() {
             <div className="listing" id="listing">
               {food_data.map(item =>(
                 <FoodCard item={item} key={item.id} onClick={() => {if(!is_present(item.id)){
-                    items.push(item.id)
-                    SetTotalCarbs(total_carbs + item.carbs_per_100g)
-                    SetRecale(true)
+                    if(!(Object.keys(items).includes(item.id))){
+                      let element = {}
+                      element["id"] = item.id
+                      element["carbs_per_100g"] = item.carbs_per_100g
+                      SetTotalCarbs(total_carbs + item.carbs_per_100g)
+                      SetRecale(true)
+                      items.push(element)
+                    }
+                    console.log("test")
                     }}}/>
               ))}
             </div>
@@ -53,7 +59,9 @@ function App() {
                 <div className="bar-fill" id="progress-bar" style={{width : (goal ? (total_carbs < goal ? (total_carbs / goal) * 100 : 100) : 0) + "%"}}></div>
               </div>
               <div className="cart" id="cart">
-                
+                {items.map(element => (
+                  <div className="element" key={element.id}><div className="info"><h4>{element.name}</h4><p>{element.carbs_per_100g}g of carbs - 100g</p></div><div className="button"><button className="add-button" >Add</button></div></div>
+                ))}
               </div>
             </div>
             <div className="bottom-panel">
@@ -111,7 +119,7 @@ function App() {
 }
 
 function is_present(id){
-  return items.includes(id)
+  return Object.keys(items).includes(id)
 }
 
 export default App
