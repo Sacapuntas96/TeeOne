@@ -11,16 +11,29 @@ if(!document.documentElement.getAttribute('data-theme')){
 }
 document.documentElement.setAttribute('data-theme', localStorage.getItem('stored_theme'))
 
-let items = []
-
 function App() {
+  const [items, SetItems] = useState([])
+
+  const AddItems = (item) => {
+    if(items.some(element => element["id"] === item["id"])){
+      return
+    }
+    else{
+      let new_item = {...item, "current_weight" : 100}
+      SetItems([...items, new_item])
+    }
+
+    console.log(items)
+  }
+
   const [current_theme, ChangeTheme] = useState(localStorage.getItem('stored_theme'))
   const SwitchTheme = (new_theme => {
     ChangeTheme(new_theme)
     localStorage.setItem('stored_theme', new_theme)
     document.documentElement.setAttribute('data-theme', new_theme)
   })
-  const [total_carbs, SetTotalCarbs] = useState(0)
+
+  const total_carbs = calculate_total(items)
   const [goal, SetGoald] = useState(0)
   const [insuline_units, SetUnits] = useState(0)
   const [extra_units, SetExtraUnits] = useState(0)
@@ -38,17 +51,10 @@ function App() {
               <input type="text" placeholder="Bread, white - 100g" id="search-bar" onChange={() => SetQuery()}/>
             <div className="listing" id="listing">
               {food_data.map(item =>(
-                <FoodCard item={item} key={item.id} onClick={() => {if(!is_present(item.id)){
-                    if(!(Object.keys(items).includes(item.id))){
-                      let element = {}
-                      element["id"] = item.id
-                      element["carbs_per_100g"] = item.carbs_per_100g
-                      SetTotalCarbs(total_carbs + item.carbs_per_100g)
+                <FoodCard item={item} key={item.id} onClick={() => {
+                      AddItems(item)
                       SetRecale(true)
-                      items.push(element)
-                    }
-                    console.log("test")
-                    }}}/>
+                    }}/>
               ))}
             </div>
           </div>
@@ -118,8 +124,13 @@ function App() {
   )
 }
 
-function is_present(id){
-  return Object.keys(items).includes(id)
+function calculate_total(items){
+  let sum = 0
+  for(let i = 0; i < items.length; i++){
+    sum += items[i]["carbs_per_100g"]
+  }
+  console.log("calculated total")
+  return sum
 }
 
 export default App
