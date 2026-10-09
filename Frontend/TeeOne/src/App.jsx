@@ -12,18 +12,26 @@ if(!document.documentElement.getAttribute('data-theme')){
 document.documentElement.setAttribute('data-theme', localStorage.getItem('stored_theme'))
 
 function App() {
+
   const [items, SetItems] = useState([])
 
-  const AddItems = (item) => {
+  const AddItem = (item) => {
     if(items.some(element => element["id"] === item["id"])){
       return
     }
     else{
+      SetRecall(true)
       let new_item = {...item, "current_weight" : 100}
       SetItems([...items, new_item])
     }
+  }
 
-    console.log(items)
+  const cards = useMemo(() => food_data.map(item => {
+    return <FoodCard key={item["id"]} item={item} onClick={() => AddItem(item)}/>
+  }), [AddItem])
+
+  const RemoveItem = (item) => {
+    SetItems(items.filter(element => element["id"] != item["id"]))
   }
 
   const [current_theme, ChangeTheme] = useState(localStorage.getItem('stored_theme'))
@@ -34,13 +42,13 @@ function App() {
   })
 
   const total_carbs = calculate_total(items)
-  const [goal, SetGoald] = useState(0)
-  const [insuline_units, SetUnits] = useState(0)
-  const [extra_units, SetExtraUnits] = useState(0)
+  const [goal, SetGoald] = useState('')
+  const [insuline_units, SetUnits] = useState('')
+  const [extra_units, SetExtraUnits] = useState('')
   const [query, SetQuery] = useState('')
   const [total_units, SetTotalUnits] = useState(0)
 
-  const [recal, SetRecale] = useState(true)
+  const [recal, SetRecall] = useState(true)
 
   return (
     <>
@@ -50,11 +58,8 @@ function App() {
             <h3>Search - <span id="result-count">{food_data.length}</span> result(s)</h3>
               <input type="text" placeholder="Bread, white - 100g" id="search-bar" onChange={() => SetQuery()}/>
             <div className="listing" id="listing">
-              {food_data.map(item =>(
-                <FoodCard item={item} key={item.id} onClick={() => {
-                      AddItems(item)
-                      SetRecale(true)
-                    }}/>
+              {cards.map(item =>(
+                item
               ))}
             </div>
           </div>
@@ -66,7 +71,9 @@ function App() {
               </div>
               <div className="cart" id="cart">
                 {items.map(element => (
-                  <div className="element" key={element.id}><div className="info"><h4>{element.name}</h4><p>{element.carbs_per_100g}g of carbs - 100g</p></div><div className="button"><button className="add-button" >Add</button></div></div>
+                  <div className="item" key={element["id"]}><div className="info" id="info"><h4>{element["name"]}</h4><p>{element['carbs_per_100g']}g of carbs - 100g</p></div><div className="remove"><input type="number" min="0" max="100000" className="carbs-input" value={element["current_weight"]} onChange={event =>{
+                      SetItems(items.map(object => object["id"] === element["id"] ? {...object, "current_weight" : event.target.value} : object))
+                  }}/><button className="remove-button" onClick={() => RemoveItem(element)}><svg width="10" height="10" viewBox="0 0 14 14"><line x1="1" y1="1" x2="13" y2="13" stroke="white" strokeWidth="2"/><line x1="13" y1="1" x2="1" y2="13" stroke="white" strokeWidth="2"/></svg></button></div></div>
                 ))}
               </div>
             </div>
@@ -74,28 +81,28 @@ function App() {
               <div className="additionnal-info">
                 <h4>Goal</h4>
                 <input type="number" min="0" value={goal} id="goal" onChange={event => {
-                  SetGoald(Number(event.target. value))
-                  SetRecale(true)
+                  SetGoald(event.target. value)
+                  SetRecall(true)
                 }}/>
               </div>
               <div className="additionnal-info">
                 <h4>Insuline Units (per 10g)</h4>
                 <input type="number" min="0" id="dosage" value={insuline_units} onChange={event => {
-                  SetUnits(Number(event.target.value))
-                  SetRecale(true)
+                  SetUnits(event.target.value)
+                  SetRecall(true)
                 }}/>
               </div>
               <div className="additionnal-info">
                 <h4>Extra Units</h4>
                 <input type="number" min="0" value={extra_units} id="extra" onChange={event => {
-                  SetExtraUnits(Number(event.target.value))
-                  SetRecale(true)
+                  SetExtraUnits(event.target.value)
+                  SetRecall(true)
                   }}/>
               </div>
               <button id="calculate" onClick={() => {
                 if(insuline_units > 0){
-                  SetTotalUnits((total_carbs / insuline_units) + extra_units)
-                  SetRecale(false)
+                  SetTotalUnits((total_carbs / (Number(insuline_units) * 10)) + Number(extra_units))
+                  SetRecall(false)
                 }
               }}>Calculate</button>
             </div>
@@ -106,7 +113,7 @@ function App() {
               <div className={"overlay" + (recal ? '' : '-disabled')}>
                 
               </div>
-              <div className="result"><span id="result">{total_units}</span><h3> -  Unit(s)</h3></div>
+              <div className="result"><span id="result">{total_units.toFixed(1)}</span><h3> -  Unit(s)</h3></div>
             </div>
           </div>
         </div>
@@ -127,9 +134,9 @@ function App() {
 function calculate_total(items){
   let sum = 0
   for(let i = 0; i < items.length; i++){
-    sum += items[i]["carbs_per_100g"]
+    sum += items[i]["carbs_per_100g"] * (items[i]["current_weight"] / 100)
   }
-  console.log("calculated total")
+
   return sum
 }
 
