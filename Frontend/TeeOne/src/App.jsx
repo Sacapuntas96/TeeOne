@@ -15,16 +15,16 @@ document.documentElement.setAttribute('data-theme', localStorage.getItem('stored
 function App() {
   const [items, SetItems] = useState([])
 
-  const AddItem = (item) => {
-    if(items.some(element => element.id === item.id)){
-      return
-    }
-    item["current_weight"] = '100'
-    SetItems(prev => [...prev, {...item, current_weight : '100'}])
-  }
+  const AddItem = useCallback((item) => {
+    SetItems(prev => prev.some(element => element["id"] == item["id"]) ? prev : [...prev, {...item, "current_weight" : 100}])
+  }, [])
 
   const RemoveItem = (item) => {
     SetItems(items.filter(element => element.id != item.id))
+  }
+
+  const EditWeight = (id, weight) => {
+    SetItems(prev =>  prev.map(element => element["id"] === id ? {...element, "current_weight" : weight} : element))
   }
 
   const [current_theme, ChangeTheme] = useState(localStorage.getItem('stored_theme'))
@@ -47,6 +47,10 @@ function App() {
 
   const [recal, SetRecall] = useState(true)
 
+  const cards = useMemo(() => food_data.filter(item => 
+   item["name"].toLowerCase().includes(query.toLowerCase())
+  ), [query])
+
   return (
     <>
       <div className="content">
@@ -55,12 +59,8 @@ function App() {
             <h3>Search - <span id="result-count">{food_data.length}</span> result(s)</h3>
               <input type="text" placeholder="Bread, white - 100g" id="search-bar" value={query} onChange={event => SetQuery(event.target.value)}/>
             <div className="listing" id="listing">
-              {food_data.map(item =>(
-                <FoodCard item={item} key={item.id} onClick={() => {
-                  if(!is_present(item.id, items)){
-                    AddItem(item)
-                    SetRecall(true)
-                    }}}/>
+              {cards.map(item =>(
+                <FoodCard item={item} onClick={AddItem} key={item["id"]}/>
               ))}
             </div>
           </div>
@@ -72,7 +72,7 @@ function App() {
               </div>
               <div className="cart" id="cart">
                 {items.map(item => (
-                  <div className="item" key={item.id}><div className="info" id="info"><h4>{item['name']}</h4><p>{item['carbs_per_100g']}g of carbs - 100g</p></div><div className="remove"><input type="number" min="0" max="100000" className="carbs-input" value="100" onChange={(event) => items.filter(element => element["id"] === item["id"])[0]["current_weight"] = event.target.value}/><button className="remove-button" onClick={() => RemoveItem(item)}><svg width="10" height="10" viewBox="0 0 14 14"><line x1="1" y1="1" x2="13" y2="13" stroke="white" strokeWidth="2"/><line x1="13" y1="1" x2="1" y2="13" stroke="white" strokeWidth="2"/></svg></button></div></div>
+                  <div className="item" key={item.id}><div className="info" id="info"><h4>{item['name']}</h4><p>{item['carbs_per_100g']}g of carbs - 100g</p></div><div className="remove"><input type="number" min="0" max="100000" className="carbs-input" value={item["current_weight"]} onChange={(event) => EditWeight(item["id"], event.target.value)}/><button className="remove-button" onClick={() => RemoveItem(item)}><svg width="10" height="10" viewBox="0 0 14 14"><line x1="1" y1="1" x2="13" y2="13" stroke="white" strokeWidth="2"/><line x1="13" y1="1" x2="1" y2="13" stroke="white" strokeWidth="2"/></svg></button></div></div>
                 ))}
               </div>
             </div>
