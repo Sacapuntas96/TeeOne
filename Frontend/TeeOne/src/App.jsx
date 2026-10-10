@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useCallback } from 'react'
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
@@ -15,20 +15,12 @@ function App() {
 
   const [items, SetItems] = useState([])
 
-  const AddItem = (item) => {
-    if(items.some(element => element["id"] === item["id"])){
-      return
-    }
-    else{
-      SetRecall(true)
-      let new_item = {...item, "current_weight" : 100}
-      SetItems([...items, new_item])
-    }
-  }
+  const AddItem = useCallback((item) => {
+    SetItems(prev => prev.some(element => element["id"] === item["id"]) ? prev : [...prev, {...item, "current_weight" : 100}])
+    SetRecall(true)
+  }, [])
 
-  const cards = useMemo(() => food_data.map(item => {
-    return <FoodCard key={item["id"]} item={item} onClick={() => AddItem(item)}/>
-  }), [AddItem])
+
 
   const RemoveItem = (item) => {
     SetItems(items.filter(element => element["id"] != item["id"]))
@@ -50,13 +42,22 @@ function App() {
 
   const [recal, SetRecall] = useState(true)
 
+  const cards = useMemo(() => {
+    let formatted_query = query.toLowerCase()
+    food_data.filter(element => element["name"].toLowerCase().includes(formatted_query)).slice(0, 50).map(item =>
+      <FoodCard item={item} onClick={
+        AddItem(item)
+      }/>
+    )
+  }, [AddItem, query])
+
   return (
     <>
       <div className="content">
         <div className="container">
           <div className="left-panel">
             <h3>Search - <span id="result-count">{food_data.length}</span> result(s)</h3>
-              <input type="text" placeholder="Bread, white - 100g" id="search-bar" onChange={() => SetQuery()}/>
+              <input type="text" placeholder="Bread, white - 100g" id="search-bar" value={query} onChange={event => SetQuery(event.target.value)}/>
             <div className="listing" id="listing">
               {cards.map(item =>(
                 item
