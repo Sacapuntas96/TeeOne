@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useCallback } from 'react'
 import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
@@ -53,7 +53,7 @@ function App() {
         <div className="container">
           <div className="left-panel">
             <h3>Search - <span id="result-count">{food_data.length}</span> result(s)</h3>
-              <input type="text" placeholder="Bread, white - 100g" id="search-bar" onChange={() => SetQuery()}/>
+              <input type="text" placeholder="Bread, white - 100g" id="search-bar" value={query} onChange={event => SetQuery(event.target.value)}/>
             <div className="listing" id="listing">
               {food_data.map(item =>(
                 <FoodCard item={item} key={item.id} onClick={() => {
@@ -89,11 +89,15 @@ function App() {
                 <input type="number" min="0" id="dosage" value={insuline_units} onChange={event => {
                   SetUnits(event.target.value)
                   SetRecall(true)
+                  SetUnits(event.target.value)
+                  SetRecall(true)
                 }}/>
               </div>
               <div className="additionnal-info">
                 <h4>Extra Units</h4>
                 <input type="number" min="0" value={extra_units} id="extra" onChange={event => {
+                  SetExtraUnits(event.target.value)
+                  SetRecall(true)
                   SetExtraUnits(event.target.value)
                   SetRecall(true)
                   }}/>
@@ -112,7 +116,7 @@ function App() {
               <div className={"overlay" + (recal ? '' : '-disabled')}>
                 
               </div>
-              <div className="result"><span id="result">{total_units}</span><h3> -  Unit(s)</h3></div>
+              <div className="result"><span id="result">{total_units.toFixed(1)}</span><h3> -  Unit(s)</h3></div>
             </div>
           </div>
         </div>
