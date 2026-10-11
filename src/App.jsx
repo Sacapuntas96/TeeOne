@@ -56,20 +56,22 @@ function App() {
 
   const cards = useMemo(() => food_data.filter(item => 
    item["name"].toLowerCase().includes(query.toLowerCase())
-  ).slice(50 * (page_number - 1), 50 * (page_number)), [query, page_number])
+  ), [query, page_number])
 
   return (
     <>
       <div className="content">
         <div className="container">
           <div className="left-panel">
-            <h3>Search - <span id="result-count">{food_data.length}</span> result(s)</h3>
-              <input type="text" placeholder="Bread, white - 100g" id="search-bar" value={query} onChange={event => SetQuery(event.target.value)}/>
+            <h3>Search - <span id="result-count">{cards.length}</span> result(s)</h3>
+              <input type="text" placeholder="Bread, white - 100g" id="search-bar" value={query} onChange={event => {
+                SetPageNumber(1)
+                SetQuery(event.target.value)}}/>
             <div className="listing" id="listing">
-              {cards.map(item =>(
+              {cards.slice(50 * (page_number - 1), 50 * (page_number)).map(item =>(
                 <FoodCard item={item} onClick={AddItem} key={item["id"]}/>
               ))}
-              <div className='page-buttons'><button onClick={() => SetPageNumber(page_number - (page_number > 1 ? 1 : 0))}>Previous</button><p>Page number {page_number}</p><button onClick={() => SetPageNumber(page_number + (page_number < (food_data.length / 50)  ? 1 : 0))}>Next</button></div>
+              <div className='page-buttons'><button onClick={() => SetPageNumber(page_number - (page_number > 1 ? 1 : 0))}>Previous</button><p>Page number {page_number}</p><button onClick={() => SetPageNumber(page_number + (page_number < (cards.length / 50)  ? 1 : 0))}>Next</button></div>
               
             </div>
           </div>
