@@ -68,10 +68,10 @@ function App() {
                 SetPageNumber(1)
                 SetQuery(event.target.value)}}/>
             <div className="listing" id="listing">
-              {cards.slice(50 * (page_number - 1), 50 * (page_number)).map(item =>(
+              {cards.length > 0 ? cards.slice(50 * (page_number - 1), 50 * (page_number)).map(item =>(
                 <FoodCard item={item} onClick={AddItem} key={item["id"]}/>
-              ))}
-              <div className='page-buttons'><button onClick={() => SetPageNumber(page_number - (page_number > 1 ? 1 : 0))}>Previous</button><p>Page number {page_number}</p><button onClick={() => SetPageNumber(page_number + (page_number < (cards.length / 50)  ? 1 : 0))}>Next</button></div>
+              )) : <h2>No results for search "{query}"</h2>}
+              <div className='page-buttons'><button onClick={() => SetPageNumber(page_number - (page_number > 1 ? 1 : 0))}>Previous</button><p>Page number {page_number} / {~~(cards.length / 50) + 1}</p><button onClick={() => SetPageNumber(page_number + (page_number < (cards.length / 50)  ? 1 : 0))}>Next</button></div>
               
             </div>
           </div>
