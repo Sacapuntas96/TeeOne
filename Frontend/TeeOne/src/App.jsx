@@ -15,12 +15,17 @@ document.documentElement.setAttribute('data-theme', localStorage.getItem('stored
 function App() {
   const [items, SetItems] = useState([])
 
-  const AddItem = useCallback((item) => {
-    SetItems(prev => prev.some(element => element["id"] == item["id"]) ? prev : [...prev, {...item, "current_weight" : 100}])
-  }, [])
+  const AddItem = (item) => {
+    if(items.some(element => element["id"] == item["id"])){
+      return
+    }
+    SetItems(prev => [...prev, {...item, "current_weight" : 100}])
+    SetRecall(true)
+  }
 
   const RemoveItem = (item) => {
     SetItems(items.filter(element => element.id != item.id))
+    SetRecall(true)
   }
 
   const EditWeight = (id, weight) => {
@@ -108,7 +113,7 @@ function App() {
               </div>
               <button id="calculate" onClick={() => {
                 if(insuline_units > 0){
-                  SetTotalUnits((total_carbs / Number(insuline_units)) + Number(extra_units))
+                  SetTotalUnits((total_carbs / (Number(insuline_units) * 10)) + Number(extra_units))
                   SetRecall(false)
                 }
               }}>Calculate</button>
@@ -136,15 +141,6 @@ function App() {
       <button className="theme-button" onClick={() => SwitchTheme(current_theme === 'light' ? 'dark' : 'light')}></button>
     </>
   )
-}
-
-function is_present(id, items){
-  for(let i = 0; i < items.length; i++){
-    if(items[i].id == id){
-      return true
-    } 
-  }
-  return false
 }
 
 function calculate_total(items){
