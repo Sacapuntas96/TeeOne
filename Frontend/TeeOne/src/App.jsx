@@ -47,9 +47,11 @@ function App() {
 
   const [recal, SetRecall] = useState(true)
 
+  const [page_number, SetPageNumber] = useState(1)
+
   const cards = useMemo(() => food_data.filter(item => 
    item["name"].toLowerCase().includes(query.toLowerCase())
-  ), [query])
+  ).slice(50 * (page_number - 1), 50 * (page_number)), [query, page_number])
 
   return (
     <>
@@ -62,6 +64,8 @@ function App() {
               {cards.map(item =>(
                 <FoodCard item={item} onClick={AddItem} key={item["id"]}/>
               ))}
+              <div className='page-buttons'><button onClick={() => SetPageNumber(page_number - (page_number > 1 ? 1 : 0))}>Previous</button><p>Page number {page_number}</p><button onClick={() => SetPageNumber(page_number + (page_number < (food_data.length / 50)  ? 1 : 0))}>Next</button></div>
+              
             </div>
           </div>
           <div className="right-panel">
@@ -72,7 +76,7 @@ function App() {
               </div>
               <div className="cart" id="cart">
                 {items.map(item => (
-                  <div className="item" key={item.id}><div className="info" id="info"><h4>{item['name']}</h4><p>{item['carbs_per_100g']}g of carbs - 100g</p></div><div className="remove"><input type="number" min="0" max="100000" className="carbs-input" value={item["current_weight"]} onChange={(event) => EditWeight(item["id"], event.target.value)}/><button className="remove-button" onClick={() => RemoveItem(item)}><svg width="10" height="10" viewBox="0 0 14 14"><line x1="1" y1="1" x2="13" y2="13" stroke="white" strokeWidth="2"/><line x1="13" y1="1" x2="1" y2="13" stroke="white" strokeWidth="2"/></svg></button></div></div>
+                  <div className="item" key={item.id}><div className="info" id="info"><h4>{item['name']}</h4><p>{item['carbs_per_100g']}g of carbs - 100g</p></div><div className="remove"><input type="number" min="0" max="100000" className="carbs-input" value={item["current_weight"]} onChange={(event) => EditWeight(item["id"], event.target.value)}/><p>g</p><button className="remove-button" onClick={() => RemoveItem(item)}><svg width="12" height="12" viewBox="0 0 14 14"><line x1="1" y1="1" x2="13" y2="13" stroke="white" strokeWidth="2"/><line x1="13" y1="1" x2="1" y2="13" stroke="white" strokeWidth="2"/></svg></button></div></div>
                 ))}
               </div>
             </div>
